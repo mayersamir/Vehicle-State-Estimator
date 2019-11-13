@@ -1,0 +1,51 @@
+/*
+ * MTIMER0_Configuration.h
+ *
+ *  Created on: Oct 21, 2019
+ *      Author: AVE-LAP-070
+ */
+
+#ifndef MCAL_TIMER_INC_TIMERCFG_H_
+#define MCAL_TIMER_INC_TIMERCFG_H_
+
+
+#define CONFIGURATION_ENABLE          1
+#define CONFIGURATION_DISABLE         0
+
+
+#define MTIMER0                       CONFIGURATION_ENABLE
+#define MTIMER1                       CONFIGURATION_ENABLE
+
+
+#if MTIMER0 == CONFIGURATION_ENABLE
+
+#define MTIMER0_PRECONFIGURED_MODE     MTIMER0_NORMAL
+
+#define MTIMER0_OPERATION_SETTING      TIMER0_TOIE_NORMAL
+
+#define MTIMER0_PRESCALER              MTIMER0_PRESCALER1024
+
+#define MTIMER0_SPEED                  8000000UL
+
+#define MTIMER0_COUNT                  16000UL
+
+#endif
+
+
+#if MTIMER1 == CONFIGURATION_ENABLE
+
+#define MTIMER1_PRECONFIGURED_MODE     TIMER1_PHASE_ICR1
+
+#define MTIMER1_OPERATION_SETTING      TIMER1_POLLING
+
+#define MTIMER1_PRESCALER              TIMER1_PRESCALER1024
+
+#define MTIMER1_SPEED                  8000000UL
+
+
+
+
+
+#endif
+
+#endif /* MCAL_TIMER_INC_TIMERCFG_H_ */

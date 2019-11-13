@@ -1,0 +1,8 @@
+Libraries/LIBRARIES_SRC/SW_Delay.o Libraries/LIBRARIES_SRC/SW_Delay.o:  \
+ ../Libraries/LIBRARIES_SRC/SW_Delay.c \
+  ../Libraries/LIBRARIES_SRC/../LIBRARIES_INCLUDES/LTYPES.h \
+  ../Libraries/LIBRARIES_SRC/../LIBRARIES_INCLUDES/SW_Delay.h
+
+../Libraries/LIBRARIES_SRC/../LIBRARIES_INCLUDES/LTYPES.h:
+
+../Libraries/LIBRARIES_SRC/../LIBRARIES_INCLUDES/SW_Delay.h:
