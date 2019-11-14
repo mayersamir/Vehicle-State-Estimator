@@ -193,7 +193,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x76bc
+.text           0x00000000     0x7784
  *(.vectors)
  .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -666,39 +666,39 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00007258      0x13e ./PcCommunication.o
                 0x00007258                setInitialValues
  .text.updateSpeed
-                0x00007396       0xa0 ./PcCommunication.o
+                0x00007396      0x168 ./PcCommunication.o
                 0x00007396                updateSpeed
  .text.getInitStatus
-                0x00007436       0x12 ./PcCommunication.o
-                0x00007436                getInitStatus
+                0x000074fe       0x12 ./PcCommunication.o
+                0x000074fe                getInitStatus
  .text.SpiManipulateMode
-                0x00007448       0xae ./SpiManager.o
-                0x00007448                SpiManipulateMode
+                0x00007510       0xae ./SpiManager.o
+                0x00007510                SpiManipulateMode
  .text.SpiSendData
-                0x000074f6       0x54 ./SpiManager.o
-                0x000074f6                SpiSendData
- .text.togg     0x0000754a       0x36 ./main.o
-                0x0000754a                togg
- .text.main     0x00007580       0x20 ./main.o
-                0x00007580                main
- .text.libgcc   0x000075a0       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x000075a0                __mulsi3
- .text.libgcc   0x000075de       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x000075de                __udivmodhi4
- .text.libgcc   0x00007606       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00007606                __udivmodsi4
- .text.libgcc   0x0000764a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x0000764a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x0000764a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000764a       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x0000764a                __prologue_saves__
- .text.libgcc   0x00007682       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00007682                __epilogue_restores__
-                0x000076b8                . = ALIGN (0x2)
+                0x000075be       0x54 ./SpiManager.o
+                0x000075be                SpiSendData
+ .text.togg     0x00007612       0x36 ./main.o
+                0x00007612                togg
+ .text.main     0x00007648       0x20 ./main.o
+                0x00007648                main
+ .text.libgcc   0x00007668       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00007668                __mulsi3
+ .text.libgcc   0x000076a6       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x000076a6                __udivmodhi4
+ .text.libgcc   0x000076ce       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x000076ce                __udivmodsi4
+ .text.libgcc   0x00007712        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00007712        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00007712        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00007712       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00007712                __prologue_saves__
+ .text.libgcc   0x0000774a       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x0000774a                __epilogue_restores__
+                0x00007780                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000076b8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000076b8                exit
-                0x000076b8                _exit
+ .fini9         0x00007780        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00007780                exit
+                0x00007780                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -717,11 +717,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000076b8        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00007780        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000076bc                _etext = .
+                0x00007784                _etext = .
 
-.data           0x00800060      0x14e load address 0x000076bc
+.data           0x00800060      0x14e load address 0x00007784
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -964,8 +964,8 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00800216                ptToExtiCallBackFunction1
                 0x00800218                ptToExtiCallBackFunction3
                 0x0080021a                PROVIDE (__bss_end, .)
-                0x000076bc                __data_load_start = LOADADDR (.data)
-                0x0000780a                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00007784                __data_load_start = LOADADDR (.data)
+                0x000078d2                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0080021a        0x0
                 0x0080021a                PROVIDE (__noinit_start, .)
@@ -990,7 +990,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x6a08
+.stab           0x00000000     0x6a74
  *(.stab)
  .stab          0x00000000      0x6a8 ./MCAL/Usart/src/Usart.o
  .stab          0x000006a8     0x1c08 ./MCAL/Timer/src/Timer.o
@@ -1027,11 +1027,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                                 0x360 (size before relaxing)
  .stab          0x00005f34      0x138 ./INTERRUPT.o
                                 0x1d4 (size before relaxing)
- .stab          0x0000606c      0x540 ./PcCommunication.o
-                                0x624 (size before relaxing)
- .stab          0x000065ac      0x2a0 ./SpiManager.o
+ .stab          0x0000606c      0x5ac ./PcCommunication.o
+                                0x690 (size before relaxing)
+ .stab          0x00006618      0x2a0 ./SpiManager.o
                                 0x384 (size before relaxing)
- .stab          0x0000684c      0x1bc ./main.o
+ .stab          0x000068b8      0x1bc ./main.o
                                 0x2c4 (size before relaxing)
 
 .stabstr        0x00000000     0x28ad

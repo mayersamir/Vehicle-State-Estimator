@@ -16,7 +16,7 @@
 #include "PcCommunication.h"
 #include "Dio.h"
 #include "PushButton.h"
-
+#include "SW_Delay.h"
 static volatile uint8 endInit = 0;
 
 static uint32 InitialTime = 0;
@@ -175,25 +175,39 @@ void updateSpeed(void)
 	uint8 PBReadValue1,PBReadValue2;
 
 	readPButton(PORTC,BIT4,&PBReadValue1);
-	readPButton(PORTD,BIT2,&PBReadValue2);
+	readPButton(PORTB,BIT2,&PBReadValue2);
+
+	if(InitialSpeed >= 9)
+	{
+		InitialSpeed = 0;
+	}
+	else if(InitialSpeed<=0)
+	{
+		InitialSpeed = 1;
+	}
 
 	if(!pressedButton1&&PBReadValue1)
 	{
 		pressedButton1 =1 ;
-		SpiSendData((InitialSpeed+1),SEND);
+		InitialSpeed++;
+		SpiSendData(InitialSpeed,SEND);
 		pressedButton2 =0;
+		SW_Delay_ms(300);
 
 	}
 	else if(!pressedButton2&&PBReadValue2)
 	{
 		pressedButton2 = 1;
-		SpiSendData((InitialSpeed-1),SEND);
+		InitialSpeed--;
+		SpiSendData(InitialSpeed,SEND);
 		pressedButton1 = 0;
+		SW_Delay_ms(300);
 	}
 	else
 	{
 		pressedButton2 = 0;
 		pressedButton1 = 0;
+		SW_Delay_ms(300);
 	}
 
 
